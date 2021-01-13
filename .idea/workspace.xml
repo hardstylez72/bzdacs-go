@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35e4a011-52ec-40d9-ba01-101c17ff8bad" name="Default Changelist" comment="">
+    <list default="true" id="35e4a011-52ec-40d9-ba01-101c17ff8bad" name="Default Changelist" comment="Changes project name">
+      <change beforePath="$PROJECT_DIR$/.idea/bzdacs-go-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bzdacs-go.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
@@ -20,6 +22,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
@@ -34,7 +37,7 @@
   </component>
   <component name="RunManager">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="bzdacs-go-client" />
+      <module name="bzdacs-go" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <kind value="FILE" />
@@ -44,7 +47,7 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="bzdacs-go-client" />
+      <module name="bzdacs-go" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
       <framework value="gotest" />
@@ -59,13 +62,29 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes project name" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes project name" />
+  </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="1401" y="78" width="998" height="882" key="CommitChangelistDialog2" timestamp="1610534704472">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1401" y="78" width="998" height="882" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1610534704472" />
+    <state x="1688" y="278" width="424" height="482" key="FileChooserDialogImpl" timestamp="1610535287237">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1688" y="278" width="424" height="482" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1610535287237" />
     <state x="1409" y="155" key="SettingsEditor" timestamp="1610533372845">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1409" y="155" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1610533372845" />
+    <state x="1500" y="256" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1610534679735">
+      <screen x="0" y="0" width="2560" height="1040" />
+    </state>
+    <state x="1500" y="256" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610534679735" />
   </component>
 </project>

@@ -1,4 +1,4 @@
-module github.com/hardstylez72/bzdacs-go-client
+module github.com/hardstylez72/bzdacs-go
 
 go 1.13
 
