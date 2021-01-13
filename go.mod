@@ -1,4 +1,4 @@
-module github.com/hardstylez72/acsmw
+module github.com/hardstylez72/bzdacs-go-client
 
 go 1.13
 
