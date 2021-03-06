@@ -14,13 +14,16 @@ type service struct {
 }
 
 type CheckAccessResponse struct {
-	Login         string   `json:"login"`
-	AccessAllowed bool     `json:"accessAllowed"`
-	Groups        []string `json:"groups"`
+	Login         string `json:"login"`
+	AccessAllowed bool   `json:"accessAllowed"`
 }
 
 var (
-	ErrLoginIsEmpty = errors.New("input param login is empty")
+	ErrLoginIsEmpty       = errors.New("input param login is empty")
+	ErrRouteIsEmpty       = errors.New("input param route is empty")
+	ErrRouteMethodIsEmpty = errors.New("input param route method is empty")
+	ErrSystemIsEmpty      = errors.New("input param system is empty")
+	ErrNamespaceIsEmpty   = errors.New("input param namespace is empty")
 )
 
 func NewService(host string) *service {
@@ -30,9 +33,24 @@ func NewService(host string) *service {
 	}
 }
 
-func (s *service) CheckAccess(ctx context.Context, login, route, method string) (*CheckAccessResponse, error) {
-	if login == "" {
+func (s *service) CheckAccess(ctx context.Context, params *InputParams) (*CheckAccessResponse, error) {
+	if params.Login == "" {
 		return nil, ErrLoginIsEmpty
+	}
+	if params.Route == "" {
+		return nil, ErrRouteIsEmpty
+	}
+
+	if params.RouteMethod == "" {
+		return nil, ErrRouteMethodIsEmpty
+	}
+
+	if params.System == "" {
+		return nil, ErrSystemIsEmpty
+	}
+
+	if params.Namespace == "" {
+		return nil, ErrNamespaceIsEmpty
 	}
 
 	const r = "/api/v1/user/access/check"
@@ -43,9 +61,11 @@ func (s *service) CheckAccess(ctx context.Context, login, route, method string) 
 		return nil, errors.Wrap(err, "error while building http request")
 	}
 
-	req.Header.Set("login", login)
-	req.Header.Set("route", route)
-	req.Header.Set("method", method)
+	req.Header.Set("login", params.Login)
+	req.Header.Set("route", params.Route)
+	req.Header.Set("method", params.RouteMethod)
+	req.Header.Set("namespace", params.Namespace)
+	req.Header.Set("system", params.System)
 
 	res, err := s.httpClient.Do(req)
 	if err != nil {

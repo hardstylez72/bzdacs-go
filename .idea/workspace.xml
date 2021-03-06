@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="35e4a011-52ec-40d9-ba01-101c17ff8bad" name="Default Changelist" comment="Changes project name">
-      <change beforePath="$PROJECT_DIR$/.idea/bzdacs-go-client.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/bzdacs-go.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" path="$PROJECT_DIR$/../../../../go1.13" />
+  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../../go1.16" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -24,10 +21,19 @@
   <component name="PropertiesComponent">
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
@@ -68,23 +74,5 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1401" y="78" width="998" height="882" key="CommitChangelistDialog2" timestamp="1610534704472">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1401" y="78" width="998" height="882" key="CommitChangelistDialog2/0.0.2560.1040@0.0.2560.1040" timestamp="1610534704472" />
-    <state x="1688" y="278" width="424" height="482" key="FileChooserDialogImpl" timestamp="1610535287237">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1688" y="278" width="424" height="482" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1610535287237" />
-    <state x="1409" y="155" key="SettingsEditor" timestamp="1610533372845">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1409" y="155" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1610533372845" />
-    <state x="1500" y="256" width="800" height="526" key="Vcs.Push.Dialog.v2" timestamp="1610534679735">
-      <screen x="0" y="0" width="2560" height="1040" />
-    </state>
-    <state x="1500" y="256" width="800" height="526" key="Vcs.Push.Dialog.v2/0.0.2560.1040@0.0.2560.1040" timestamp="1610534679735" />
   </component>
 </project>

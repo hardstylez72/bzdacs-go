@@ -5,26 +5,31 @@ import (
 	"net/http"
 )
 
-type userGroups struct{}
-
-type GetLoginFunc func(req *http.Request) string
-type GetRouteAndMethodFunc func(req *http.Request) (route, method string)
-
-type Service interface {
-	CheckAccess(ctx context.Context, login, route, method string) (*CheckAccessResponse, error)
+type GetParamsFunc func(req *http.Request) *InputParams
+type InputParams struct {
+	Login       string
+	Route       string
+	Namespace   string
+	System      string
+	RouteMethod string
 }
 
-func AccessCheck(service Service, getLoginFn GetLoginFunc, getRouteAndMethodFn GetRouteAndMethodFunc) func(next http.Handler) http.Handler {
+type Service interface {
+	CheckAccess(ctx context.Context, params *InputParams) (*CheckAccessResponse, error)
+}
+
+func AccessCheck(host string, fn GetParamsFunc) func(next http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
+
+		s := NewService(host)
 
 		fn := func(w http.ResponseWriter, r *http.Request) {
 
 			ctx := r.Context()
 
-			login := getLoginFn(r)
-			route, method := getRouteAndMethodFn(r)
+			params := fn(r)
 
-			res, err := service.CheckAccess(ctx, login, route, method)
+			res, err := s.CheckAccess(ctx, params)
 			if err != nil {
 				w.WriteHeader(http.StatusForbidden)
 				return
@@ -35,22 +40,9 @@ func AccessCheck(service Service, getLoginFn GetLoginFunc, getRouteAndMethodFn G
 				return
 			}
 
-			ctx = setUserGroupsIntoContext(ctx, res.Groups)
 			next.ServeHTTP(w, r.WithContext(ctx))
 		}
 
 		return http.HandlerFunc(fn)
 	}
-}
-
-func setUserGroupsIntoContext(ctx context.Context, groups []string) context.Context {
-	return context.WithValue(ctx, userGroups{}, groups)
-}
-
-func GetUserGroupsFromContext(ctx context.Context) []string {
-	u, ok := ctx.Value(userGroups{}).([]string)
-	if ok {
-		return u
-	}
-	return []string{""}
 }
