@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35e4a011-52ec-40d9-ba01-101c17ff8bad" name="Default Changelist" comment="Changes project name">
+    <list default="true" id="35e4a011-52ec-40d9-ba01-101c17ff8bad" name="Default Changelist" comment="Changes api">
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +14,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">
+    <option name="context" value="do-ams3-k8s-eblog" />
+    <option name="namespace" value="default" />
+  </component>
   <component name="ProjectId" id="1n0iJI3fX2nBRb16c1zstlRfVmZ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -68,9 +72,21 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes project name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes project name" />
+    <MESSAGE value="Changes api" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes api" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
